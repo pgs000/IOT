@@ -1,4 +1,4 @@
-// Definição dos pinos
+ Definição dos pinos
 const int ledCarroVerde1 = 2;
 const int ledCarroAmarelo1 = 3;
 const int ledCarroVermelho1 = 4;
@@ -13,7 +13,7 @@ const int trigPin = 12;
 const int echoPin = 13;
 
 void setup() {
-    // Configuração dos pinos como saída
+     Configuração dos pinos como saída
     pinMode(ledCarroVerde1, OUTPUT);
     pinMode(ledCarroAmarelo1, OUTPUT);
     pinMode(ledCarroVermelho1, OUTPUT);
@@ -25,18 +25,18 @@ void setup() {
     pinMode(ledPedestreVerde2, OUTPUT);
     pinMode(ledPedestreVermelho2, OUTPUT);
     
-    // Configuração dos pinos do sensor de distância
+     Configuração dos pinos do sensor de distância
     pinMode(trigPin, OUTPUT);
     pinMode(echoPin, INPUT);
     
-    // Inicializa os semáforos
+     Inicializa os semáforos
     iniciarSemaforos();
 }
 
 void loop() {
     long duration, distance;
     
-    // Aciona o sensor de distância
+     Aciona o sensor de distância
     digitalWrite(trigPin, LOW);
     delay(2);
     digitalWrite(trigPin, HIGH);
@@ -44,16 +44,16 @@ void loop() {
     digitalWrite(trigPin, LOW);
     
     duration = pulseIn(echoPin, HIGH);
-    distance = (duration * 0.034) / 2; // em cm
+    distance = (duration * 0.034) / 2;  em cm
 
-    if (distance <= 50) { // Se um pedestre está a 50 cm da faixa
-        // Troca para sinal vermelho para carros
+    if (distance <= 50) {  Se um pedestre está a 50 cm da faixa
+         Troca para sinal vermelho para carros
         semaforosCarroVermelho();
-        // Sinais de pedestres ficam verdes
+         Sinais de pedestres ficam verdes
         semaforosPedestreVerde();
-        delay(15000); // Aguarda 15 segundos
+        delay(15000);  Aguarda 15 segundos
         
-        // Verifica se o pedestre saiu da faixa
+         Verifica se o pedestre saiu da faixa
         if (verificaPedestreSaindo()) {
             semaforosPedestreVermelho();
             iniciarSemaforos();
@@ -101,7 +101,7 @@ void semaforosPedestreVermelho() {
 bool verificaPedestreSaindo() {
     long duration, distance;
     
-    // Aguardar um tempo para verificar se não há pedestre
+     Aguardar um tempo para verificar se não há pedestre
     for (int i = 0; i < 5; i++) {
         digitalWrite(trigPin, LOW);
         delay(2);
@@ -113,9 +113,9 @@ bool verificaPedestreSaindo() {
         distance = (duration * 0.034) / 2;
         
         if (distance <= 50) {
-            return false; // Se o pedestre ainda está presente
+            return false;  Se o pedestre ainda está presente
         }
-        delay(2000); // Aguarda 2 segundos antes da próxima verificação
+        delay(2000);  Aguarda 2 segundos antes da próxima verificação
     }
-    return true; // Se não detectar pedestre
+    return true;  Se não detectar pedestre
 }
