@@ -2,6 +2,7 @@ variaveis
 int led =3;
 
 int sensorluminosidade= A0;
+
 variavel para capturar a luminosidade
 
 int luz =0; 
