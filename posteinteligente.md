@@ -21,6 +21,7 @@ void setup()
 
 void loop()
 {
+
    capturar o que o sensor leu no ambiente
    analogRead é usado para leitura analogica
   
