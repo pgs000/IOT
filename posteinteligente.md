@@ -1,12 +1,15 @@
 variaveis
 int led =3;
+
 int sensorluminosidade= A0;
- variavel para capturar a luminosidade
+variavel para capturar a luminosidade
+
 int luz =0; 
 
 void setup()
 {
-   led é de saida
+
+ led é de saida
   pinMode(led,OUTPUT);
    sensor é de entrada
   pinMode(sensorluminosidade,INPUT);
