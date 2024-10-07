@@ -19,7 +19,7 @@ informações em tempo real. O sistema é útil para aplicações onde o monitor
 #Montagem do Circuito
 
 
-![Imagem do Circuito](Captura de tela 2024-10-04 110738.png)
+![Imagem do Circuito](temperaturasensor.png)
 
 # Explicação do Código
 
