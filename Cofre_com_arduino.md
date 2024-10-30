@@ -111,3 +111,6 @@ Sinta-se à vontade para fazer um fork do repositório e enviar melhorias. Qualq
 Este projeto é licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.
 
 # Imagens do Projeto
+
+![cofre1](https://github.com/user-attachments/assets/672aab99-f5dd-4418-b85a-6a1d0db5a705)
+![cofre1](https://github.com/user-attachments/assets/f4903d5f-5c54-4f46-8fd8-6404782f9b68)
